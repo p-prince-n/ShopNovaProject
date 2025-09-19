@@ -19,7 +19,7 @@ const app= express();
 dotenv.config();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://shop-nova-project.vercel.app',
     methods:['GET','PUT','POST','DELETE', 'PATCH'],
     credentials: true,
 }))
