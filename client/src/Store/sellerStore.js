@@ -3,7 +3,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 const API_URL = "https://shopnovaproject.onrender.com/sellers";
-
+axios.defaults.withCredentials = true;
 export const useSellerStore = create((set, get) => ({
   unverifiedSellers: [],
   verifiedSellers: [],

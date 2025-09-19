@@ -3,7 +3,7 @@ import { create } from "zustand";
 import axios from "axios";
 
 const API_URL = "https://shopnovaproject.onrender.com/orders"; // your base URL
-
+axios.defaults.withCredentials = true;
 export const useOrderStore = create((set, get) => ({
   userOrders: [],
   sellerOrders: [],

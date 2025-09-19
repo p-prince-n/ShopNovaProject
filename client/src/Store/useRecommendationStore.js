@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
-
+axios.defaults.withCredentials = true;
 export const useRecommendationStore = create((set) => ({
   recommendedProducts: [],
   loading: false,

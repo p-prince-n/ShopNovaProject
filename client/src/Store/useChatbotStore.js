@@ -3,7 +3,7 @@ import axios from "axios";
 
 const LOCAL_STORAGE_KEY = "chatbot_messages"; // same key for all users
 const MESSAGE_EXPIRY_HOURS = 24; // messages older than this will be cleared
-
+axios.defaults.withCredentials = true;
 // Load messages from localStorage if not expired
 const loadMessages = () => {
   const stored = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) || [];
