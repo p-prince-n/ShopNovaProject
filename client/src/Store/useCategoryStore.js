@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/category";
+const API_URL = "https://shopnovaproject.onrender.com/category";
 
 export const useCategoryStore = create((set) => ({
   categories: [],

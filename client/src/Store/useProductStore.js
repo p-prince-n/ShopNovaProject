@@ -2,7 +2,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/product";
+const API_URL = "https://shopnovaproject.onrender.com/product";
 
 export const useProductStore = create((set, get) => ({
   product: null,

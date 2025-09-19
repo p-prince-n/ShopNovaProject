@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 
 
 
-const API_URL = "http://localhost:3000/review";
+const API_URL = "https://shopnovaproject.onrender.com/review";
 export const useReviewStore = create((set, get) => ({
   reviews: [],
   loading: false,

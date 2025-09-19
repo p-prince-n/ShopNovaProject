@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/cart";
+const API_URL = "https://shopnovaproject.onrender.com/cart";
 
 export const useCartStore = create((set, get) => ({
   cart: null,

@@ -10,7 +10,7 @@ export const useRecommendationStore = create((set) => ({
   fetchPurchaseBasedRecommendations: async () => {
     set({ loading: true, error: null });
     try {
-      const response = await axios.get("http://localhost:3000/recommand/purchase-based", {
+      const response = await axios.get("https://shopnovaproject.onrender.com/recommand/purchase-based", {
         withCredentials: true, // to send cookies if JWT is stored there
       });
       set({ recommendedProducts: response.data.recommendedProducts, loading: false });

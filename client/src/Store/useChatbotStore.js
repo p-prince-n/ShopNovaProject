@@ -45,7 +45,7 @@ export const useChatbotStore = create((set, get) => ({
 
     try {
       // Replace with your chatbot API
-      const { data } = await axios.post("http://localhost:3000/chatbot/query", { message: input });
+      const { data } = await axios.post("https://shopnovaproject.onrender.com/chatbot/query", { message: input });
       get().addMessage({ sender: "bot", ...data });
     } catch (err) {
       console.error(err);

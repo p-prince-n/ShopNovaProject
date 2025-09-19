@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-const API_URL = "http://localhost:3000/sellers";
+const API_URL = "https://shopnovaproject.onrender.com/sellers";
 
 export const useSellerStore = create((set, get) => ({
   unverifiedSellers: [],

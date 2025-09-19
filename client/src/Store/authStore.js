@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import axios from 'axios'
 import toast from 'react-hot-toast';
 
-const API_URL = 'http://localhost:3000/auth'
+const API_URL = 'https://shopnovaproject.onrender.com/auth'
 axios.defaults.withCredentials = true;
 
 export const useAuthStore = create((set) => ({
