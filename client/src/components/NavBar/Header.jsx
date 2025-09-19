@@ -99,7 +99,7 @@ const Header = () => {
             </motion.div>
           </AnimatePresence>
         ) : (
-          <div className="container flex justify-evenly items-center md:gap-0 py-4 w-full  ">
+          <div className="container flex justify-evenly items-center gap-1 md:gap-0 py-4 w-full  ">
             <div className="text-2xl flex items-center font-bold ">
               {/* Add logo */}
               <a href="/home" className="flex hover:font-extrabold">
@@ -140,7 +140,7 @@ const Header = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-5">
+            <div className="flex gap-2 md:gap-5">
               <DropDownMenu />
               <button
                 className="md:hidden dark:text-white text-2xl hover:bg-blue-500 hover:text-black dark:hover:bg-emerald-400 dark:hover:text-green-950 hover:font-bold rounded-full p-2 duration-200 "
