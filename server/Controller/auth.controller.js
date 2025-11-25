@@ -51,9 +51,9 @@ export const signUp = async (req, res) => {
 
         await user.save();
         
+        generateTokenAndSetCookie(res, user._id);
         await sendVerificationEmail(user.email, verificationToken);
 
-        generateTokenAndSetCookie(res, user._id);
         await sendMobileVerificationCode(user.mobileNumber, `Your mobile number verification code is : ${mobileVerificationCode}`);
 
         res.status(201).json({
