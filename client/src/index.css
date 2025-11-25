@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@plugin 'tailwind-scrollbar';
+@plugin "tailwind-scrollbar-hide";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
