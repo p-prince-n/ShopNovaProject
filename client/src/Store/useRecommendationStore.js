@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
+import { BASE_URL } from "../utils/constant";
 axios.defaults.withCredentials = true;
 export const useRecommendationStore = create((set) => ({
   recommendedProducts: [],
@@ -10,7 +11,7 @@ export const useRecommendationStore = create((set) => ({
   fetchPurchaseBasedRecommendations: async () => {
     set({ loading: true, error: null });
     try {
-      const response = await axios.get("http://localhost:3000/recommand/purchase-based", {
+      const response = await axios.get(`${BASE_URL}/recommand/purchase-based`, {
         withCredentials: true,
       });
       set({ recommendedProducts: response.data.recommendedProducts, loading: false });

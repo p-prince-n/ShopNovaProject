@@ -1,8 +1,9 @@
 
 import { create } from "zustand";
 import axios from "axios";
+import { BASE_URL } from "../utils/constant";
 
-const API_URL = "http://localhost:3000/product";
+const API_URL = `${BASE_URL}/product`;
 axios.defaults.withCredentials = true;
 export const useProductStore = create((set, get) => ({
   product: null,

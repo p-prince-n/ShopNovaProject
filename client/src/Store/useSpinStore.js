@@ -1,8 +1,9 @@
 
 import { create } from "zustand";
 import axios from "axios";
+import { BASE_URL } from "../utils/constant";
 
-const API_URL = "http://localhost:3000/spin";
+const API_URL = `${BASE_URL}/spin`;
 axios.defaults.withCredentials = true;
 
 export const useSpinStore = create((set, get) => ({

@@ -2,10 +2,11 @@
 import { create } from "zustand";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import { BASE_URL } from "../utils/constant";
 
 
 axios.defaults.withCredentials = true;
-const API_URL = "http://localhost:3000/review";
+const API_URL = `${BASE_URL}/review`;
 export const useReviewStore = create((set, get) => ({
   reviews: [],
   loading: false,

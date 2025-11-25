@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
+import { BASE_URL } from "../utils/constant";
 axios.defaults.withCredentials = true;
 const LOCAL_STORAGE_KEY = "chatbot_messages";
 const MESSAGE_EXPIRY_HOURS = 24;
@@ -45,7 +46,7 @@ export const useChatbotStore = create((set, get) => ({
 
     try {
 
-      const { data } = await axios.post("http://localhost:3000/chatbot/query", { message: input });
+      const { data } = await axios.post(`${BASE_URL}/chatbot/query`, { message: input });
       get().addMessage({ sender: "bot", ...data });
     } catch (err) {
       console.error(err);

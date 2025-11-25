@@ -1,0 +1,1 @@
+export const BASE_URL="https://shopnovaproject-1.onrender.com"

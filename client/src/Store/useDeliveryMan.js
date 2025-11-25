@@ -1,8 +1,9 @@
 import { create } from "zustand";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { BASE_URL } from "../utils/constant";
 
-const API_URL = "http://localhost:3000/delivery";
+const API_URL = `${BASE_URL}/delivery`;
 axios.defaults.withCredentials = true;
 
 export const useDeliveryManStore = create((set, get) => ({
